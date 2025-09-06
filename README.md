@@ -98,7 +98,6 @@ Before running LearnSphere, ensure you have the following installed:
    # Then edit .env with your actual keys:
    VITE_GEMINI_API_KEY=your_gemini_api_key_here
    VITE_GROQ_API_KEY=your_groq_api_key_here
-   VITE_BACKEND_URL=http://127.0.0.1:8000
    ```
 
 4. **Start the development server**
@@ -134,10 +133,6 @@ LearnSphere requires API keys for AI functionality. All keys are stored securely
 # Required for frontend
 VITE_GEMINI_API_KEY=your_gemini_api_key_here
 VITE_GROQ_API_KEY=your_groq_api_key_here
-VITE_BACKEND_URL=http://127.0.0.1:8000
-
-# Optional
-VITE_DEBUG_MODE=false
 ```
 
 **⚠️ Security Note**: Never commit your `.env` file to version control. The `.env.example` file is provided as a template.
@@ -332,8 +327,6 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 ## 📞 Support
 
 **API Key Issues**: If you encounter API key errors, verify your `.env` file contains valid keys and restart the development server.
-
-For support, email support@learnsphere.com or join our Discord community.
 
 ---
 
