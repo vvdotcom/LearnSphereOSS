@@ -53,47 +53,6 @@ export const getGeminiResponse = async (prompt:string) => {
   }
 };
 
-
-// export const getOssResponse = async (prompt:string) => {
-//   const apiKey = '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'; // Replace with your actual key if needed, but be aware of security risks.
-//   const apiUrl = 'https://openrouter.ai/api/v1/chat/completions';
-
-//   try {
-//     const res = await fetch(apiUrl, {
-//       method: 'POST',
-//       headers: {
-//         'Content-Type': 'application/json',
-//         'Authorization': `Bearer ${apiKey}`,
-//       },
-//       body: JSON.stringify({
-//         model: "openai/gpt-oss-120b:free",
-//         messages: [{
-//           "role": "user",
-//           "content": prompt
-//         }],
-//       }),
-//     });
-
-//     if (!res.ok) {
-//       throw new Error(`API request failed with status ${res.status}: ${await res.text()}`);
-//     }
-
-//     const data = await res.json();
-//     const fullContent = data.choices[0]?.message?.content || '';
-    
-//     if (fullContent) {
-//       return cleanAndParseJson(fullContent);
-//     } else {
-//       return "No content received from the API.";
-//     }
-//   } catch (err) {
-//     console.error("Error in AI Service:", err);
-//     // Re-throw the error so the calling component can handle it
-//     throw err;
-//   }
-// };
-
-
 export const getOssResponse = async (prompt: string) => {
   const apiKey = import.meta.env.VITE_GROQ_API_KEY;
   if (!apiKey) {
